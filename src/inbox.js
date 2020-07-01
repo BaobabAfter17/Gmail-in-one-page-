@@ -17,7 +17,7 @@ let Inbox = {
         const msgLi = document.createElement("li");
         msgLi.className = "messages";
         msgLi.innerHTML = `
-            <span class="from">from: ${msg.from}</span><br />
+            <span class="from">${msg.from}</span><br />
             <span class="subject">subject: ${msg.subject}</span><br />
             <span class="body">body: ${msg.body}</span>
         `;

@@ -19,7 +19,7 @@ let messages = {
     },
     {
         from: "severussnape@hogwarts.edu.com",
-        subject: "What's next step again the Dark Lord?",
+        subject: "What's next step against the Dark Lord?",
         body: "Really? Beat him with a cookie?"
     }
   ]
