@@ -91,9 +91,20 @@
   !*** ./src/index.js ***!
   \**********************/
 /*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const Router = __webpack_require__(/*! ./router */ \"./src/router.js\");\n\ndocument.addEventListener(\"DOMContentLoaded\", (event) => {\n    const sidebarEls = document.querySelectorAll(\".sidebar-nav li\");\n    sidebarEls.forEach((el) => {\n        el.addEventListener(\"click\", (event) => {\n            const location = el.innerText;\n            window.location.hash = location.toLowerCase();\n        });\n    });\n    const content = document.querySelector(\".content\");\n    const router = new Router(content);\n    router.start();\n});\n\n\n//test\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/router.js":
+/*!***********************!*\
+  !*** ./src/router.js ***!
+  \***********************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("document.addEventListener(\"DOMContentLoaded\", (event) => {\n    const sidebarEls = document.querySelectorAll(\".sidebar-nav li\");\n    sidebarEls.forEach((el) => {\n        el.addEventListener(\"click\", (event) => {\n            const location = el.innerText;\n            window.location.hash = location.toLowerCase();\n        });\n    })\n});\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("function Router(node) {\n    this.node = node;\n}\n\nRouter.prototype.start = function () {\n    this.render();\n    window.addEventListener(\"hashchange\", (event) => {\n        this.render();\n    });\n}\n\nRouter.prototype.activeRoute = function () {\n   return window.location.hash.slice(1);\n}\n\nRouter.prototype.render = function () {\n    this.node.innerHTML = \"\";\n    const route = this.activeRoute();\n    const p = document.createElement(\"p\");\n    p.innerHTML = route;\n    this.node.appendChild(p);\n}\n\nmodule.exports = Router;\n\n//# sourceURL=webpack:///./src/router.js?");
 
 /***/ })
 
