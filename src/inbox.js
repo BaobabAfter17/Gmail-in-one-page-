@@ -1,6 +1,6 @@
 const MessageStore = require("./message_store");
 
-let Inbox = {
+const Inbox = {
     render: function() {
         const ul = document.createElement("ul");
         ul.className = "messages";

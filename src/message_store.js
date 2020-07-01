@@ -44,6 +44,10 @@ const MessageStore = {
         return messages.sent;
     },
 
+    getMessageDraft: function() {
+      return messageDraft;
+    },
+
     updateDraftField: function(field, value) {
       messageDraft[field] = value;
     },
