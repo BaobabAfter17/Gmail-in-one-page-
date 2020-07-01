@@ -53,7 +53,7 @@ const MessageStore = {
     },
 
     sendDraft: function() {
-      messages.inbox.push(messageDraft);
+      messages.sent.push(messageDraft);
       messageDraft = new Message();
     }
 };
