@@ -26,12 +26,14 @@ const Compose = {
     const draft = MessageStore.getMessageDraft();
     const content = `
         <form class="compose-form">
-            <input placeholder="Recipient"
+            <input
+                placeholder="Recipient"
                 name="to"
                 type="text"
                 value=${draft.to}>
-            <input placeholder="Subject"
-                name="to"
+            <input
+                placeholder="Subject"
+                name="subject"
                 type="text"
                 value=${draft.subject}>
             <textarea name="body" rows=20>${draft.body}</textarea>

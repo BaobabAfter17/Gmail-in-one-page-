@@ -25,8 +25,9 @@ let messages = {
   ]
 };
 
+const user = "dumbledor@hogwarts.edu.com";
 
-function Message(from, to, subject, body) {
+function Message(from = user, to = "", subject = "", body = "") {
   this.from = from;
   this.to = to;
   this.subject = subject;
