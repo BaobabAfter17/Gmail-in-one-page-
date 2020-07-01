@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log(\"It's working\");\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("document.addEventListener(\"DOMContentLoaded\", (event) => {\n    const sidebarEls = document.querySelectorAll(\".sidebar-nav li\");\n    sidebarEls.forEach((el) => {\n        el.addEventListener(\"click\", (event) => {\n            const location = el.innerText;\n            window.location.hash = location.toLowerCase();\n        });\n    })\n});\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
