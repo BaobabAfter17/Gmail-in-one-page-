@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const routes = {inbox: Inbox};
     const router = new Router(content, routes);
     router.start();
+    window.location.hash = "#inbox";
 });
 
 
